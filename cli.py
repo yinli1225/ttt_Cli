@@ -15,15 +15,14 @@ if __name__ == '__main__':
             print(row) # TODO: Show the board to the user.
         row = int(input('enter row')) # TODO: Input a move from the player.
         col = int(input('enter col'))
-
-        #if not / continue
-        #if board[row][col] is not None, 
         print(row, col)
 
-        if current_player == '0':
+        if current_player == '0' and board[row][col] is None:
             board[row][col] = 'O' 
-        if current_player == '1':
+        if current_player == '1' and board[row][col] is None:
             board[row][col] = 'X' 
+        if board[row][col] is not None:
+            print('Spot taken, please enter a different value')
         winner = get_winner(board) 
         if winner is not None: 
             print(winner)  
