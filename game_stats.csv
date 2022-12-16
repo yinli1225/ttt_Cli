@@ -1,0 +1,10 @@
+,Player 1,Player 2,Winner
+0,<bound method Bot.name of <logic_wk6.Bot object at 0x1007f3be0>>,<bound method Bot.name of <logic_wk6.Bot object at 0x1007f3c40>>,X
+0,1,1,O
+0,1,1,X
+0,1,1,X
+0,1,1,O
+0,1,1,Draw
+0,1,1,X
+0,1,"/Users/xiaochiu/opt/anaconda3/bin/python ""/Users/xiaochiu/ttt/cli wk6.py""",Draw
+0,1,2,O

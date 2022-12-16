@@ -4,7 +4,6 @@ import logic
 
 
 class TestLogic(unittest.TestCase):
-
     def test_get_winner(self):
         board = [
             ['X', None, 'O'],
