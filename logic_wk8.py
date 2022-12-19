@@ -53,7 +53,6 @@ class Game:
         self.player2 = player2
         self.board = Board()
         self.turn = 0
-        self.game_count = 0
 
     def current_player(self):
         if self.turn %2 == 0:
@@ -88,8 +87,10 @@ class Game:
             game_not_over = self.board.get_winner() is None
 
         winner = self.board.get_winner()
-        self.game_count += 1 
-        self.addGametoCSV(winner, self.game_count, moves)
+        df = pd.read_csv('game_stats.csv')
+        game_count = len(df)
+
+        self.addGametoCSV(winner, game_count, moves)
         
         return winner
 
@@ -105,7 +106,7 @@ class Game:
             winner_type = 'N/A'
 
         current_game = {
-            'Game ID': [self.game_count],
+            'Game ID': [game_count],
             'Player 1':[self.player1.name],
             'Player 1 Type':[self.player1.player_type],
             'Player 2':[self.player2.name],
@@ -119,6 +120,7 @@ class Game:
         output_path = 'game_stats.csv'
         current_game_df.to_csv(output_path, mode="a",header=not os.path.exists(output_path))
         # a for exsiting, w for new file
+        
 
 class Human:
     def __init__(self,name,player_type):
