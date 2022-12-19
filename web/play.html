@@ -9,37 +9,41 @@
     <a href="landing.html">Demo Video</a>
     <a href="index.html">Home</a>
     <a href="#">Play</a>
-    <a href="statics.html">Statistics</a>
+    <a href="stats.html">Statistics</a>
   </nav>
 
   <h1>Tic-Tac-Toe</h1>
 
+  <p id="status">Game in progress...</p>
+
   <table class="board">
     <tr>
-      <td id="cell-0-0"></td>
-      <td id="cell-0-1"></td>
-      <td id="cell-0-2"></td>
+      <td class="light"></td>
+      <td class="dark"></td>
+      <td class="light"></td>
     </tr>
     <tr>
-      <td id="cell-1-0"></td>
-      <td id="cell-1-1"></td>
-      <td id="cell-1-2"></td>
+      <td class="dark"></td>
+      <td class="light"></td>
+      <td class="dark"></td>
     </tr>
     <tr>
-      <td id="cell-2-0"></td>
-      <td id="cell-2-1"></td>
-      <td id="cell-2-2"></td>
+      <td class="light"></td>
+      <td class="dark"></td>
+      <td class="light"></td>
     </tr>
   </table>
 
-  <form action="play.html" method="POST">
-    <label for="row">Row:</label>
-    <input type="number" name="row" id="row" min="0" max="2">
-    <label for="column">Column:</label>
-    <input type="number" name="column" id="column" min="0" max="2">
-    <button type="submit">Make move</button>
-  </form>
-  <p id="status">Game in progress...</p>
+  <div class="mark">
+    <form action="play.html" method="POST">
+      <label for="row">Row:</label>
+      <input type="number" name="row" id="row" min="0" max="2">
+      <label for="column">Column:</label>
+      <input type="number" name="column" id="column" min="0" max="2">
+      <button type="submit">Make move</button>
+    </form>
+  </div>
+  
   <script src="cli wk8.py"></script>
 
   <div id="footer">
