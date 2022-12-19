@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title> Yin's Tic-Tac-Toe Game</title>
+</head>
+<body>
+  <nav>
+    <a href="landing.html">Demo Video</a>
+    <a href="index.html">Home</a>
+    <a href="#">Play</a>
+    <a href="statics.html">Statistics</a>
+  </nav>
+
+  <h1>Tic-Tac-Toe</h1>
+
+  <table class="board">
+    <tr>
+      <td id="cell-0-0"></td>
+      <td id="cell-0-1"></td>
+      <td id="cell-0-2"></td>
+    </tr>
+    <tr>
+      <td id="cell-1-0"></td>
+      <td id="cell-1-1"></td>
+      <td id="cell-1-2"></td>
+    </tr>
+    <tr>
+      <td id="cell-2-0"></td>
+      <td id="cell-2-1"></td>
+      <td id="cell-2-2"></td>
+    </tr>
+  </table>
+
+  <form action="play.html" method="POST">
+    <label for="row">Row:</label>
+    <input type="number" name="row" id="row" min="0" max="2">
+    <label for="column">Column:</label>
+    <input type="number" name="column" id="column" min="0" max="2">
+    <button type="submit">Make move</button>
+  </form>
+  <p id="status">Game in progress...</p>
+  <script src="cli wk8.py"></script>
+
+  <div id="footer">
+        
+    <a> &copy; Copyright 2022 by Yin Li</a>.
+  </div>
+</body>
+</html>
+
+    
